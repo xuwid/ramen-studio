@@ -64,13 +64,15 @@ const Menu = () => {
   };
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 sticky-wall">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 kawaii-text">Our Ramen Menu</h1>
+          <h1 className="text-5xl font-bold mb-4 korean-text flex items-center justify-center gap-2">
+            🐾 Our Korean Ramen Menu 🐾
+          </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose your base, add your toppings, and create the perfect bowl! All served with love and kawaii vibes. 🐼
+            Choose your base, add your toppings, and create the perfect bowl! All served with Korean love and hospitality. 🇰🇷
           </p>
         </div>
 
@@ -90,13 +92,17 @@ const Menu = () => {
 
         {/* Ramen Options */}
         <section className="mb-16 mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8 kawaii-text">Ramen Base Options</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 korean-text flex items-center justify-center gap-2">
+            🐾 Ramen Base Options 🐾
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ramenOptions.map((ramen, index) => (
-              <Card key={index} className="kawaii-shadow hover:scale-105 transition-all duration-300 overflow-hidden">
-                <CardHeader className="bg-gradient-to-r from-accent/10 to-primary/10">
+                <Card key={index} className="kawaii-shadow hover:scale-105 transition-all duration-300 overflow-hidden border-2 border-neon-pink/20">
+                <CardHeader className="bg-gradient-to-r from-neon-pink/10 to-korean-blue/10">
                   <div className="flex justify-between items-start">
-                    <CardTitle className="text-lg">{ramen.name}</CardTitle>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      🐾 {ramen.name}
+                    </CardTitle>
                     <div className="flex flex-col items-end gap-1">
                       {ramen.popular && (
                         <Badge variant="destructive" className="text-xs">
@@ -121,7 +127,9 @@ const Menu = () => {
 
         {/* Toppings Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 kawaii-text">Extra Toppings</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 korean-text flex items-center justify-center gap-2">
+            🐾 Extra Toppings 🐾
+          </h2>
           <div className="bg-wood-light/30 rounded-2xl p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {toppings.map((topping, index) => (
@@ -144,7 +152,9 @@ const Menu = () => {
 
         {/* How It Works */}
         <section className="text-center">
-          <h2 className="text-3xl font-bold mb-8 kawaii-text">How It Works</h2>
+          <h2 className="text-3xl font-bold mb-8 korean-text flex items-center justify-center gap-2">
+            🐾 How It Works 🐾
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <div className="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">

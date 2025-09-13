@@ -34,17 +34,26 @@
     --accent: 320 85% 65%;
     --accent-foreground: 0 0% 100%;
 
-    /* Kawaii colors */
-    --kawaii-blue: 195 100% 75%;
-    --kawaii-green: 150 80% 70%;
+    /* Korean K-wave colors - bright and modern */
+    --korean-pink: 330 85% 70%;
+    --korean-blue: 210 100% 65%;
+    --korean-purple: 270 75% 70%;
+    --korean-green: 140 65% 60%;
+    --korean-orange: 25 95% 65%;
+    
+    /* Keep kawaii for compatibility */
+    --kawaii-blue: 210 100% 65%;
+    --kawaii-green: 140 65% 60%;
     --kawaii-yellow: 48 100% 70%;
-    --kawaii-purple: 270 75% 75%;
+    --kawaii-purple: 270 75% 70%;
     --kawaii-orange: 25 95% 65%;
 
-    /* Neon glow colors */
-    --neon-pink: 320 100% 50%;
-    --neon-blue: 195 100% 50%;
-    --neon-green: 150 100% 50%;
+    /* Neon glow colors - Korean restaurant signs */
+    --neon-pink: 320 100% 70%;
+    --neon-blue: 220 100% 70%;
+    --neon-green: 140 100% 60%;
+    --neon-orange: 25 100% 70%;
+    --neon-red: 0 100% 65%;
 
     /* Wood textures */
     --wood-light: 35 45% 88%;
@@ -180,11 +189,37 @@
   }
 
   /* Typography */
-  .kawaii-text {
+  .korean-text {
     font-weight: 700;
-    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--korean-blue)), hsl(var(--korean-purple)));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  
+  /* Keep kawaii-text for compatibility */
+  .kawaii-text {
+    font-weight: 700;
+    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--korean-blue)), hsl(var(--korean-purple)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Korean sticky note wall effect */
+  .sticky-wall {
+    background: linear-gradient(45deg, 
+      hsl(var(--sticky-pink) / 0.1) 0%, 
+      hsl(var(--sticky-blue) / 0.1) 25%, 
+      hsl(var(--sticky-green) / 0.1) 50%, 
+      hsl(var(--sticky-yellow) / 0.1) 75%, 
+      hsl(var(--korean-pink) / 0.1) 100%);
+    background-size: 400% 400%;
+    animation: sticky-gradient 8s ease-in-out infinite;
+  }
+  
+  @keyframes sticky-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 }

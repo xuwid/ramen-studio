@@ -47,18 +47,28 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Kawaii colors
+        // Korean K-wave colors
+        korean: {
+          pink: "hsl(var(--korean-pink))",
+          blue: "hsl(var(--korean-blue))",
+          purple: "hsl(var(--korean-purple))",
+          green: "hsl(var(--korean-green))",
+          orange: "hsl(var(--korean-orange))",
+        },
+        // Keep kawaii for compatibility
         kawaii: {
-          blue: "hsl(var(--kawaii-blue))",
-          green: "hsl(var(--kawaii-green))",
-          yellow: "hsl(var(--kawaii-yellow))",
-          purple: "hsl(var(--kawaii-purple))",
-          orange: "hsl(var(--kawaii-orange))",
+          blue: "hsl(var(--korean-blue))",
+          green: "hsl(var(--korean-green))",
+          yellow: "hsl(var(--sticky-yellow))",
+          purple: "hsl(var(--korean-purple))",
+          orange: "hsl(var(--korean-orange))",
         },
         neon: {
           pink: "hsl(var(--neon-pink))",
           blue: "hsl(var(--neon-blue))",
           green: "hsl(var(--neon-green))",
+          orange: "hsl(var(--neon-orange))",
+          red: "hsl(var(--neon-red))",
         },
         wood: {
           light: "hsl(var(--wood-light))",

@@ -4,13 +4,15 @@ import StickyNote from "@/components/StickyNote";
 
 const About = () => {
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 sticky-wall">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 kawaii-text">About Ramen Studios</h1>
+          <h1 className="text-5xl font-bold mb-4 korean-text flex items-center justify-center gap-2">
+            🐾 About Ramen Studio 🐾
+          </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Where kawaii meets comfort food, and every bowl tells a story of creativity, community, and deliciousness!
+            Pick your ramen, cook it your way. We have limited seating (10–12 people only) for the ultimate Korean dining experience!
           </p>
         </div>
 
@@ -18,16 +20,16 @@ const About = () => {
         <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold kawaii-text">Our Story</h2>
+              <h2 className="text-3xl font-bold korean-text flex items-center gap-2">🐾 Our Story</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Ramen Studios was born from a simple idea: what if making ramen could be as fun and creative as the 
-                anime we love? We wanted to create a space where food becomes an art form, where every customer is 
-                the chef of their own culinary adventure.
+                Ramen Studio was born from a simple idea: what if making ramen could be as fun and interactive as 
+                Korean street food culture? We wanted to create a space where food becomes an art form, where every 
+                customer is the chef of their own culinary adventure.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Inspired by the vibrant kawaii culture and the communal spirit of Japanese ramen shops, we designed 
+                Inspired by the vibrant K-wave culture and the communal spirit of Korean restaurants, we designed 
                 a cozy space where creativity flourishes. With only 10-12 seats, every visit feels intimate and special 
-                - like dining at a friend's house who happens to make incredible ramen!
+                - like dining at a Korean friend's house who happens to make incredible ramen!
               </p>
               <div className="flex flex-wrap gap-4">
                 <StickyNote color="pink" rotation={-2}>

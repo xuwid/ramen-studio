@@ -10,7 +10,7 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center justify-center bg-gradient-to-br from-background via-background/90 to-accent/10"
+        className="relative h-screen flex items-center justify-center sticky-wall"
         style={{
           backgroundImage: `url(${heroPandaRamen})`,
           backgroundSize: "cover",
@@ -18,13 +18,13 @@ const Home = () => {
           backgroundBlendMode: "overlay",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/70 to-background/85" />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 kawaii-text">
-            Ramen Studios
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 korean-text flex items-center justify-center gap-4 flex-wrap">
+            🐾 Ramen Studio 🐾
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Make your own ramen experience! Cozy vibes, kawaii atmosphere, and the most delicious DIY ramen adventure.
+          <p className="text-xl md:text-2xl text-neon-pink mb-8 max-w-2xl mx-auto font-semibold">
+            Make your own ramen experience, Korean style! 🇰🇷🍜✨
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="kawaii" size="lg">
@@ -43,17 +43,17 @@ const Home = () => {
         {/* Floating Sticky Notes */}
         <div className="absolute top-20 left-10 hidden lg:block">
           <StickyNote color="pink" rotation={-5} className="animate-float">
-            <p className="text-sm font-bold">So kawaii! 🐼</p>
+            <p className="text-sm font-bold">🐾 Korean vibes! 🇰🇷</p>
           </StickyNote>
         </div>
         <div className="absolute top-32 right-16 hidden lg:block">
           <StickyNote color="blue" rotation={3} className="animate-float" style={{animationDelay: '1s'}}>
-            <p className="text-sm font-bold">Best ramen! 🍜</p>
+            <p className="text-sm font-bold">🐾 Best ramen! 🍜</p>
           </StickyNote>
         </div>
         <div className="absolute bottom-32 left-20 hidden lg:block">
           <StickyNote color="green" rotation={-3} className="animate-float" style={{animationDelay: '2s'}}>
-            <p className="text-sm font-bold">Love this place! ❤️</p>
+            <p className="text-sm font-bold">🐾 Love this place! ❤️</p>
           </StickyNote>
         </div>
       </section>
@@ -61,8 +61,8 @@ const Home = () => {
       {/* Features Section */}
       <section className="py-16 bg-gradient-to-b from-background to-wood-light/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 kawaii-text">
-            Why Ramen Studios?
+          <h2 className="text-4xl font-bold text-center mb-12 korean-text flex items-center justify-center gap-2">
+            🐾 Why Ramen Studio? 🐾
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="kawaii-shadow hover:scale-105 transition-transform duration-300">
@@ -111,10 +111,11 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-accent/10 via-primary/10 to-kawaii-purple/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 kawaii-text">
-            Ready for Your Ramen Adventure?
+      <section className="py-16 sticky-wall relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/70"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-6 korean-text flex items-center justify-center gap-2">
+            🐾 Ready for Your Korean Ramen Adventure? 🐾
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Come create memories, one delicious bowl at a time. Limited seats available - first come, first served!

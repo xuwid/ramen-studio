@@ -11,6 +11,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Menu", path: "/menu" },
+    { name: "Seats", path: "/seats" },
     { name: "About", path: "/about" },
     { name: "Visit Us", path: "/contact" },
   ];
@@ -21,8 +22,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-            <img src={pandaLogo} alt="Ramen Studios Panda" className="w-10 h-10" />
-            <span className="text-2xl font-bold kawaii-text">Ramen Studios</span>
+            <img src={pandaLogo} alt="Ramen Studio Panda" className="w-10 h-10" />
+            <span className="text-2xl font-bold korean-text flex items-center gap-2">
+              🐾 Ramen Studio
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

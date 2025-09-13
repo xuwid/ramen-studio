@@ -5,13 +5,15 @@ import StickyNote from "@/components/StickyNote";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 sticky-wall">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 kawaii-text">Visit Ramen Studios</h1>
+          <h1 className="text-5xl font-bold mb-4 korean-text flex items-center justify-center gap-2">
+            🐾 Visit Ramen Studio 🐾
+          </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Come find us in our cozy little corner of the world! Limited seats, unlimited fun. 🐼🍜
+            M39G+GQ2, I-8 Markaz I-8, Islamabad | Limited seats, unlimited Korean hospitality! 🇰🇷🍜
           </p>
         </div>
 
@@ -27,10 +29,10 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p className="font-semibold">123 Kawaii Street</p>
-                <p className="text-muted-foreground">Ramen District, RD 12345</p>
+                <p className="font-semibold">M39G+GQ2, I-8 Markaz</p>
+                <p className="text-muted-foreground">I 8 Markaz I-8, Islamabad</p>
                 <p className="text-sm text-muted-foreground">
-                  Located in the heart of the arts district, next to the cute cat café!
+                  Located in the heart of I-8 Markaz, easy to find with our neon paw print signs!
                 </p>
               </CardContent>
             </Card>
@@ -69,10 +71,10 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p className="font-semibold">(555) RAMEN-UP</p>
-                <p className="text-muted-foreground">hello@ramenstudios.com</p>
+                <p className="font-semibold">0301 5839369</p>
+                <p className="text-muted-foreground">hello@ramenstudio.pk</p>
                 <p className="text-sm text-muted-foreground">
-                  Follow us @ramenstudios for daily kawaii updates! 📸
+                  Follow us @ramenstudio for daily Korean food updates! 📸🇰🇷
                 </p>
               </CardContent>
             </Card>
