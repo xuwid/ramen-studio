@@ -2,39 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Ramen Studios Design System - Kawaii & Playful */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - warm and cozy */
+    --background: 351 43% 96%;
+    --foreground: 15 25% 15%;
 
+    /* Card colors - soft and inviting */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 15 25% 15%;
 
+    /* Popover colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 15 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - vibrant ramen red */
+    --primary: 348 83% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - warm wood tone */
+    --secondary: 35 32% 85%;
+    --secondary-foreground: 15 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - soft neutral */
+    --muted: 35 15% 92%;
+    --muted-foreground: 15 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - bright neon pink */
+    --accent: 320 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Kawaii colors */
+    --kawaii-blue: 195 100% 75%;
+    --kawaii-green: 150 80% 70%;
+    --kawaii-yellow: 48 100% 70%;
+    --kawaii-purple: 270 75% 75%;
+    --kawaii-orange: 25 95% 65%;
+
+    /* Neon glow colors */
+    --neon-pink: 320 100% 50%;
+    --neon-blue: 195 100% 50%;
+    --neon-green: 150 100% 50%;
+
+    /* Wood textures */
+    --wood-light: 35 45% 88%;
+    --wood-medium: 35 32% 75%;
+    --wood-dark: 35 25% 45%;
+
+    /* Sticky note colors */
+    --sticky-pink: 320 85% 85%;
+    --sticky-blue: 195 85% 85%;
+    --sticky-green: 150 85% 85%;
+    --sticky-yellow: 48 85% 85%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 348 83% 47%;
 
     --radius: 0.5rem;
 
@@ -101,5 +129,62 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Kawaii animations */
+  @keyframes bounce-cute {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.02); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--neon-pink) / 0.4); }
+    50% { box-shadow: 0 0 30px hsl(var(--neon-pink) / 0.8); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+  }
+
+  /* Custom utility classes */
+  .kawaii-shadow {
+    box-shadow: 0 8px 25px -8px hsl(var(--accent) / 0.3);
+  }
+
+  .neon-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .sticky-note {
+    transform: rotate(-2deg);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .sticky-note:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 10;
+  }
+
+  .wood-texture {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--wood-light)),
+      hsl(var(--wood-medium)) 25%,
+      hsl(var(--wood-light)) 50%,
+      hsl(var(--wood-medium)) 75%,
+      hsl(var(--wood-light))
+    );
+  }
+
+  /* Typography */
+  .kawaii-text {
+    font-weight: 700;
+    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

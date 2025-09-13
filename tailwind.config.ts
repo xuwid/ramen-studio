@@ -47,6 +47,30 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Kawaii colors
+        kawaii: {
+          blue: "hsl(var(--kawaii-blue))",
+          green: "hsl(var(--kawaii-green))",
+          yellow: "hsl(var(--kawaii-yellow))",
+          purple: "hsl(var(--kawaii-purple))",
+          orange: "hsl(var(--kawaii-orange))",
+        },
+        neon: {
+          pink: "hsl(var(--neon-pink))",
+          blue: "hsl(var(--neon-blue))",
+          green: "hsl(var(--neon-green))",
+        },
+        wood: {
+          light: "hsl(var(--wood-light))",
+          medium: "hsl(var(--wood-medium))",
+          dark: "hsl(var(--wood-dark))",
+        },
+        sticky: {
+          pink: "hsl(var(--sticky-pink))",
+          blue: "hsl(var(--sticky-blue))",
+          green: "hsl(var(--sticky-green))",
+          yellow: "hsl(var(--sticky-yellow))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
