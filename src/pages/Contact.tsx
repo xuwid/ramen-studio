@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 korean-text slide-up">
+          <h1 className="text-5xl font-bold mb-4 palette-text slide-up">
             �‍💼 Visit Ramen Studio �‍💼
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto fade-in" style={{ animationDelay: '0.2s' }}>
@@ -27,16 +27,16 @@ const Contact = () => {
               alt="Korean character welcoming visitors" 
               className="w-24 opacity-50 hover:opacity-80 transition-all duration-400 hover:scale-110"
             />
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-korean-rose text-white text-xs px-3 py-1 rounded-full whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-palette-rose-red text-white text-xs px-3 py-1 rounded-full whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity duration-300">
               Come visit us! 🍜
             </div>
           </div>
           {/* Contact Details */}
           <div className="space-y-6 fade-in" style={{ animationDelay: '0.4s' }}>
-            <Card className="korean-card">
+            <Card className="palette-card">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 korean-text">
-                  <MapPin className="w-5 h-5 text-korean-pink" />
+                <CardTitle className="flex items-center gap-2 palette-text">
+                  <MapPin className="w-5 h-5 text-palette-red-violet" />
                   Location
                 </CardTitle>
               </CardHeader>
@@ -49,10 +49,10 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card">
+            <Card className="palette-card">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 korean-text">
-                  <Clock className="w-5 h-5 text-korean-peach" />
+                <CardTitle className="flex items-center gap-2 palette-text">
+                  <Clock className="w-5 h-5 text-palette-columbia-blue" />
                   Hours
                 </CardTitle>
               </CardHeader>
@@ -67,7 +67,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">10:00 AM - 10:00 PM</p>
                   </div>
                 </div>
-                <div className="mt-4 p-3 bg-korean-peach/10 rounded-lg">
+                <div className="mt-4 p-3 bg-palette-columbia-blue/10 rounded-lg">
                   <p className="text-sm font-semibold text-korean-peach">
                     Last orders 30 minutes before closing!
                   </p>
@@ -75,10 +75,10 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card">
+            <Card className="palette-card">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 korean-text">
-                  <Phone className="w-5 h-5 text-korean-green" />
+                <CardTitle className="flex items-center gap-2 palette-text">
+                  <Phone className="w-5 h-5 text-palette-slate-gray" />
                   Contact
                 </CardTitle>
               </CardHeader>
@@ -94,9 +94,9 @@ const Contact = () => {
 
           {/* Map Placeholder & Important Info */}
           <div className="space-y-6 fade-in" style={{ animationDelay: '0.6s' }}>
-            <Card className="korean-card">
+            <Card className="palette-card">
               <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-korean-pink/20 to-korean-peach/20 rounded-lg h-64 flex items-center justify-center">
+                <div className="bg-gradient-to-br from-palette-red-violet/20 to-palette-columbia-blue/20 rounded-lg h-64 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="w-12 h-12 text-korean-pink mx-auto mb-4" />
                     <p className="text-lg font-semibold korean-text">Interactive Map</p>
@@ -109,10 +109,10 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card border-korean-rose/20">
-              <CardHeader className="bg-gradient-to-r from-korean-pink/10 to-korean-peach/10">
-                <CardTitle className="flex items-center gap-2 korean-text">
-                  <Users className="w-5 h-5 text-korean-rose" />
+            <Card className="palette-card border-palette-rose-red/20">
+              <CardHeader className="bg-gradient-to-r from-palette-red-violet/10 to-palette-columbia-blue/10">
+                <CardTitle className="flex items-center gap-2 palette-text">
+                  <Users className="w-5 h-5 text-palette-rose-red" />
                   Important Info
                 </CardTitle>
               </CardHeader>

@@ -9,7 +9,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 korean-text slide-up">
+          <h1 className="text-5xl font-bold mb-4 palette-text slide-up">
             �‍👩‍👧‍👦 About Ramen Studio 👨‍👩‍👧‍�
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto fade-in" style={{ animationDelay: '0.2s' }}>
@@ -21,7 +21,7 @@ const About = () => {
         <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 fade-in" style={{ animationDelay: '0.4s' }}>
-              <h2 className="text-3xl font-bold korean-text">�‍🍳 Our Story 👨‍🍳</h2>
+              <h2 className="text-3xl font-bold palette-text">�‍🍳 Our Story 👨‍🍳</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Ramen Studio was born from a simple idea: what if making ramen could be as fun and interactive as 
                 Korean street food culture? We wanted to create a space where food becomes an art form, where every 
@@ -42,12 +42,12 @@ const About = () => {
               </div>
             </div>
             <div className="relative fade-in" style={{ animationDelay: '0.6s' }}>
-              <Card className="korean-card relative overflow-hidden">
+              <Card className="palette-card relative overflow-hidden">
                 <CardContent className="p-8">
 
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
-                      <div className="bg-korean-pink/20 p-3 rounded-full">
+                      <div className="bg-palette-red-violet/20 p-3 rounded-full">
                         <Heart className="w-6 h-6 text-korean-pink" />
                       </div>
                       <div>
@@ -96,7 +96,7 @@ const About = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="korean-card fade-in" style={{ animationDelay: '0.1s' }}>
+            <Card className="palette-card fade-in" style={{ animationDelay: '0.1s' }}>
               <CardContent className="p-6 text-center">
                 <div className="bg-korean-pink/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">👩‍🎨</span>
@@ -106,7 +106,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card fade-in" style={{ animationDelay: '0.2s' }}>
+            <Card className="palette-card fade-in" style={{ animationDelay: '0.2s' }}>
               <CardContent className="p-6 text-center">
                 <div className="bg-korean-peach/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">👨‍👩‍👧‍👦</span>
@@ -116,7 +116,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card fade-in" style={{ animationDelay: '0.3s' }}>
+            <Card className="palette-card fade-in" style={{ animationDelay: '0.3s' }}>
               <CardContent className="p-6 text-center">
                 <div className="bg-korean-rose/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">👨‍�</span>
@@ -126,7 +126,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card fade-in" style={{ animationDelay: '0.4s' }}>
+            <Card className="palette-card fade-in" style={{ animationDelay: '0.4s' }}>
               <CardContent className="p-6 text-center">
                 <div className="bg-korean-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🇰🇷</span>

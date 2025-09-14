@@ -34,14 +34,14 @@
     --accent: 315 90% 65%;
     --accent-foreground: 0 0% 100%;
 
-    /* Korean K-wave colors - magenta/pink palette matching menu board */
-    --korean-pink: 320 85% 65%;
-    --korean-rose: 315 80% 55%;
-    --korean-peach: 330 75% 70%;
-    --korean-blue: 280 60% 70%;
-    --korean-purple: 310 70% 65%;
-    --korean-green: 280 40% 60%;
-    --korean-orange: 340 70% 65%;
+    /* Korean K-wave colors - new palette theme */
+    --korean-pink: 318 85% 65%;
+    --korean-rose: 347 80% 55%;
+    --korean-peach: 203 75% 70%;
+    --korean-blue: 209 60% 70%;
+    --korean-purple: 318 70% 65%;
+    --korean-green: 28 40% 60%;
+    --korean-orange: 318 70% 65%;
     
     /* Keep kawaii for compatibility - magenta theme */
     --kawaii-blue: 280 60% 70%;
@@ -50,28 +50,35 @@
     --kawaii-purple: 310 70% 65%;
     --kawaii-orange: 340 70% 65%;
 
-    /* Neon glow colors - vibrant magenta/pink aesthetic */
-    --neon-pink: 320 95% 70%;
-    --neon-rose: 315 90% 65%;
-    --neon-peach: 330 85% 75%;
-    --neon-blue: 280 70% 75%;
-    --neon-green: 280 50% 65%;
-    --neon-orange: 340 80% 70%;
-    --neon-red: 345 85% 60%;
+    /* Neon glow colors - new palette theme */
+    --neon-pink: 318 95% 70%;
+    --neon-rose: 347 90% 65%;
+    --neon-peach: 203 85% 75%;
+    --neon-blue: 209 70% 75%;
+    --neon-green: 28 50% 65%;
+    --neon-orange: 318 80% 70%;
+    --neon-red: 347 85% 60%;
 
     /* Wood textures - warmer tones */
     --wood-light: 25 50% 90%;
     --wood-medium: 25 40% 80%;
     --wood-dark: 25 35% 50%;
 
-    /* Sticky note colors - magenta/pink palette */
-    --sticky-pink: 320 75% 88%;
-    --sticky-rose: 315 70% 85%;
-    --sticky-peach: 330 70% 88%;
-    --sticky-blue: 280 60% 88%;
-    --sticky-green: 280 40% 88%;
-    --sticky-yellow: 330 65% 88%;
-    --sticky-lavender: 310 65% 88%;
+    /* Sticky note colors - new palette theme */
+    --sticky-pink: 318 74% 88%;
+    --sticky-rose: 347 46% 85%;
+    --sticky-peach: 203 41% 88%;
+    --sticky-blue: 209 20% 88%;
+    --sticky-green: 28 41% 88%;
+    --sticky-yellow: 318 74% 75%;
+    --sticky-lavender: 203 41% 85%;
+
+    /* Custom color palette */
+    --red-violet: 318 74% 46%;
+    --rose-red: 347 46% 49%;
+    --columbia-blue: 203 41% 78%;
+    --bistre: 28 41% 18%;
+    --slate-gray: 209 20% 55%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -123,6 +130,13 @@
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
+    /* Custom color palette - dark mode */
+    --red-violet: 318 74% 46%;
+    --rose-red: 347 46% 49%;
+    --columbia-blue: 203 41% 78%;
+    --bistre: 28 41% 18%;
+    --slate-gray: 209 20% 55%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
@@ -263,6 +277,21 @@
     box-shadow: 0 12px 24px hsl(var(--korean-pink) / 0.25);
   }
 
+  /* New palette card */
+  .palette-card {
+    background: linear-gradient(135deg, 
+      hsl(var(--card)) 0%,
+      hsl(var(--red-violet) / 0.08) 100%);
+    border: 2px solid hsl(var(--red-violet) / 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+  }
+
+  .palette-card:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 12px 24px hsl(var(--red-violet) / 0.25);
+  }
+
   /* Professional Korean Typography - Vibrant Magenta Theme */
   .korean-text {
     font-weight: 700;
@@ -316,6 +345,18 @@
     -webkit-text-fill-color: transparent;
   }
   
+  /* New palette text gradient */
+  .palette-text {
+    font-weight: 700;
+    background: linear-gradient(135deg, 
+      hsl(var(--red-violet)), 
+      hsl(var(--rose-red)), 
+      hsl(var(--columbia-blue)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
   /* Enhanced Korean sticky note wall effect - static for better performance */
   .sticky-wall {
     background: linear-gradient(45deg, 
@@ -333,6 +374,15 @@
       hsl(var(--background)) 0%,
       hsl(var(--korean-pink) / 0.06) 30%,
       hsl(var(--neon-pink) / 0.04) 70%,
+      hsl(var(--background)) 100%);
+  }
+
+  /* New palette atmosphere */
+  .palette-atmosphere {
+    background: linear-gradient(135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--red-violet) / 0.06) 30%,
+      hsl(var(--columbia-blue) / 0.04) 70%,
       hsl(var(--background)) 100%);
   }
 

@@ -84,7 +84,7 @@ const KoreanStickyWall: React.FC = () => {
 
   return (
     <div className="relative w-full max-w-md mx-auto">
-      <div className="relative w-full h-96 bg-gradient-to-br from-korean-rose/10 via-korean-peach/5 to-korean-pink/10 rounded-lg overflow-hidden">
+      <div className="relative w-full h-96 bg-gradient-to-br from-palette-rose-red/10 via-palette-columbia-blue/5 to-palette-red-violet/10 rounded-lg overflow-hidden">
         {notes.map((note) => (
           <div
             key={note.id}
@@ -104,20 +104,20 @@ const KoreanStickyWall: React.FC = () => {
         ))}
         
         {/* Decorative Korean characters */}
-        <div className="absolute top-2 right-2 text-korean-pink/30 text-2xl">
+        <div className="absolute top-2 right-2 text-palette-red-violet/30 text-2xl">
           한국
         </div>
-        <div className="absolute bottom-4 left-4 text-korean-rose/30 text-lg">
+        <div className="absolute bottom-4 left-4 text-palette-rose-red/30 text-lg">
           라면
         </div>
-        <div className="absolute top-1/2 left-2 text-korean-peach/30 text-xl">
+        <div className="absolute top-1/2 left-2 text-palette-columbia-blue/30 text-xl">
           🐾
         </div>
       </div>
       
       {/* Wall title */}
       <div className="text-center mt-4">
-        <h3 className="korean-text text-lg font-bold">
+        <h3 className="palette-text text-lg font-bold">
           Customer Love Wall 💕
         </h3>
         <p className="text-sm text-muted-foreground mt-1">

@@ -12,9 +12,9 @@ const Footer = () => {
               <img 
                 src={pandaLogo} 
                 alt="Ramen Studio Logo" 
-                className="w-10 h-10 rounded-full border-2 border-korean-pink/20 shadow-md" 
+                className="w-10 h-10 rounded-full border-2 border-palette-red-violet/20 shadow-md" 
               />
-              <span className="text-xl font-bold kawaii-text">Ramen Studio</span>
+              <span className="text-xl font-bold palette-text">Ramen Studio</span>
             </div>
             <p className="text-muted-foreground">
               Make your own Korean ramen experience! Cozy, fun, and delicious - just like Korean home. 감사합니다! 🇰🇷

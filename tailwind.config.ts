@@ -88,6 +88,14 @@ export default {
           yellow: "hsl(var(--sticky-yellow))",
           lavender: "hsl(var(--sticky-lavender))",
         },
+        // Custom color palette
+        palette: {
+          "red-violet": "hsl(var(--red-violet))",
+          "rose-red": "hsl(var(--rose-red))",
+          "columbia-blue": "hsl(var(--columbia-blue))",
+          bistre: "hsl(var(--bistre))",
+          "slate-gray": "hsl(var(--slate-gray))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

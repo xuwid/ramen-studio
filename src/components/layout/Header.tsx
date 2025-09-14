@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-card/85 backdrop-blur-md border-b border-korean-pink/20 sticky top-0 z-50">
+    <header className="bg-card/85 backdrop-blur-md border-b border-palette-red-violet/20 sticky top-0 z-50">
       {/* Import Google Font */}
       <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
@@ -50,9 +50,9 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-semibold transition-all duration-300 hover:text-korean-rose ${
+                className={`font-semibold transition-all duration-300 hover:text-palette-rose-red ${
                   location.pathname === item.path
-                    ? "text-korean-pink"
+                    ? "text-palette-red-violet"
                     : "text-foreground"
                 }`}
               >
@@ -108,12 +108,12 @@ const Header = () => {
       {/* Custom CSS for Neon Glow */}
       <style>{`
   .neon-text {
-    color: #ff66b3; /* slightly lighter pink */
+    color: hsl(var(--red-violet)); /* New palette red-violet */
     text-shadow:
-      0 0 6px #ff66b3,
-      0 0 12px #ff66b3,
-      0 0 22px #ff66b3,
-      0 0 45px #ff3399;
+      0 0 6px hsl(var(--red-violet)),
+      0 0 12px hsl(var(--red-violet)),
+      0 0 22px hsl(var(--rose-red)),
+      0 0 45px hsl(var(--red-violet));
     letter-spacing: 1px;
   }
 `}</style>

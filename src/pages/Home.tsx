@@ -8,7 +8,7 @@ import heroPandaRamen from "@/assets/hero-panda-ramen.jpg";
 
 const Home = () => {
   return (
-    <div className="min-h-screen korean-atmosphere">
+    <div className="min-h-screen palette-atmosphere">
       {/* Hero Section */}
       <section 
         className="relative h-screen flex items-center justify-center sticky-wall"
@@ -19,7 +19,7 @@ const Home = () => {
           backgroundBlendMode: "overlay",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-korean-orange/10 to-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-palette-columbia-blue/10 to-background/85" />
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 slide-up mt-40">
           
@@ -68,7 +68,7 @@ const Home = () => {
             🐾 Why Ramen Studio? 🐾
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="korean-card fade-in relative overflow-hidden" style={{ animationDelay: '0.1s' }}>
+            <Card className="palette-card fade-in relative overflow-hidden" style={{ animationDelay: '0.1s' }}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-korean-rose/20 p-4 rounded-full">
@@ -85,7 +85,7 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card fade-in relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
+            <Card className="palette-card fade-in relative overflow-hidden" style={{ animationDelay: '0.2s' }}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-korean-peach/20 p-4 rounded-full">
@@ -102,7 +102,7 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="korean-card fade-in relative overflow-hidden" style={{ animationDelay: '0.3s' }}>
+            <Card className="palette-card fade-in relative overflow-hidden" style={{ animationDelay: '0.3s' }}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-korean-green/20 p-4 rounded-full">
