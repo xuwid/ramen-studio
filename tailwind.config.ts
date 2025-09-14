@@ -47,9 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Korean K-wave colors
+        // Enhanced Korean K-wave colors
         korean: {
           pink: "hsl(var(--korean-pink))",
+          rose: "hsl(var(--korean-rose))",
+          peach: "hsl(var(--korean-peach))",
           blue: "hsl(var(--korean-blue))",
           purple: "hsl(var(--korean-purple))",
           green: "hsl(var(--korean-green))",
@@ -65,6 +67,8 @@ export default {
         },
         neon: {
           pink: "hsl(var(--neon-pink))",
+          rose: "hsl(var(--neon-rose))",
+          peach: "hsl(var(--neon-peach))",
           blue: "hsl(var(--neon-blue))",
           green: "hsl(var(--neon-green))",
           orange: "hsl(var(--neon-orange))",
@@ -77,9 +81,12 @@ export default {
         },
         sticky: {
           pink: "hsl(var(--sticky-pink))",
+          rose: "hsl(var(--sticky-rose))",
+          peach: "hsl(var(--sticky-peach))",
           blue: "hsl(var(--sticky-blue))",
           green: "hsl(var(--sticky-green))",
           yellow: "hsl(var(--sticky-yellow))",
+          lavender: "hsl(var(--sticky-lavender))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -114,10 +121,22 @@ export default {
             height: "0",
           },
         },
+        // Removed gentle-float for better performance
+        "slide-in-up": {
+          from: { opacity: "0", transform: "translate3d(0, 20px, 0)" },
+          to: { opacity: "1", transform: "translate3d(0, 0, 0)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Removed gentle-float animation for better performance
+        "slide-up": "slide-in-up 0.5s ease-out forwards", 
+        "fade-in": "fade-in 0.6s ease-out forwards",
       },
     },
   },

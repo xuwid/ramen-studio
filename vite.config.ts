@@ -4,10 +4,14 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
+//please allow https://3073931f45a7.ngrok-free.app
+
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    cors: false,
+    allowedHosts: ["3073931f45a7.ngrok-free.app"]
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

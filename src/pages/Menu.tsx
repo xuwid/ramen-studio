@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import StickyNote from "@/components/StickyNote";
+import koreanRamenCharacter from "@/assets/male_character.png";
 
 const Menu = () => {
   const ramenOptions = [
@@ -64,27 +65,27 @@ const Menu = () => {
   };
 
   return (
-    <div className="min-h-screen py-8 sticky-wall">
+    <div className="min-h-screen py-8 korean-atmosphere">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 korean-text flex items-center justify-center gap-2">
-            🐾 Our Korean Ramen Menu 🐾
+        <div className="text-center mb-12 slide-up">
+          <h1 className="text-5xl font-bold mb-4 korean-text">
+            �‍🍳 Our Korean Ramen Menu �‍🍳
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose your base, add your toppings, and create the perfect bowl! All served with Korean love and hospitality. 🇰🇷
+          <p className="text-xl text-korean-rose max-w-2xl mx-auto fade-in" style={{ animationDelay: '0.2s' }}>
+            Choose your base, add your toppings, and create the perfect bowl! All served with Korean love and hospitality by our amazing team. 🇰🇷 맛있게 드세요!
           </p>
         </div>
 
-        {/* Floating Menu Notes */}
-        <div className="relative mb-8">
+        {/* Menu Notes */}
+        <div className="relative mb-8 fade-in" style={{ animationDelay: '0.4s' }}>
           <div className="absolute top-0 left-4 hidden lg:block">
-            <StickyNote color="pink" rotation={-5}>
+            <StickyNote color="rose" rotation={-5}>
               <p className="text-sm font-bold">Made fresh daily! 🍜</p>
             </StickyNote>
           </div>
           <div className="absolute top-0 right-4 hidden lg:block">
-            <StickyNote color="blue" rotation={3}>
+            <StickyNote color="peach" rotation={3}>
               <p className="text-sm font-bold">DIY = More fun! 🎉</p>
             </StickyNote>
           </div>
@@ -92,13 +93,13 @@ const Menu = () => {
 
         {/* Ramen Options */}
         <section className="mb-16 mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8 korean-text flex items-center justify-center gap-2">
+          <h2 className="text-3xl font-bold text-center mb-8 korean-text slide-up">
             🐾 Ramen Base Options 🐾
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ramenOptions.map((ramen, index) => (
-                <Card key={index} className="kawaii-shadow hover:scale-105 transition-all duration-300 overflow-hidden border-2 border-neon-pink/20">
-                <CardHeader className="bg-gradient-to-r from-neon-pink/10 to-korean-blue/10">
+                <Card key={index} className="korean-card fade-in overflow-hidden border-2 border-korean-pink/20" style={{ animationDelay: `${0.1 * index}s` }}>
+                <CardHeader className="bg-gradient-to-r from-korean-pink/10 to-korean-peach/10">
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-lg flex items-center gap-2">
                       🐾 {ramen.name}
@@ -126,24 +127,30 @@ const Menu = () => {
         </section>
 
         {/* Toppings Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 korean-text flex items-center justify-center gap-2">
+        <section className="mb-16 relative">
+          <h2 className="text-3xl font-bold text-center mb-8 korean-text slide-up">
             🐾 Extra Toppings 🐾
           </h2>
-          <div className="bg-wood-light/30 rounded-2xl p-8">
+          {/* Korean character positioned subtly in top-right of toppings section */}
+          <img 
+            src={koreanRamenCharacter} 
+            alt="Korean character enjoying ramen" 
+            className="absolute -top-8 -right-8 w-20 opacity-30 hover:opacity-60 transition-all duration-300 hover:scale-110 z-10 hidden md:block"
+          />
+          <div className="bg-korean-pink/5 rounded-2xl p-8 fade-in relative" style={{ animationDelay: '0.3s' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {toppings.map((topping, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-lg p-4 text-center hover:scale-105 transition-transform duration-300 kawaii-shadow"
+                  className="bg-card rounded-lg p-4 text-center hover:scale-105 transition-transform duration-150 ease-out kawaii-shadow"
                 >
                   <h3 className="font-semibold text-sm mb-1">{topping.name}</h3>
-                  <p className="text-primary font-bold">{topping.price}</p>
+                  <p className="text-korean-rose font-bold">{topping.price}</p>
                 </div>
               ))}
             </div>
             <div className="text-center mt-6">
-              <StickyNote color="yellow" className="inline-block">
+              <StickyNote color="lavender" className="inline-block">
                 <p className="text-sm font-bold">Mix and match for your perfect bowl! 🥢</p>
               </StickyNote>
             </div>
@@ -152,30 +159,30 @@ const Menu = () => {
 
         {/* How It Works */}
         <section className="text-center">
-          <h2 className="text-3xl font-bold mb-8 korean-text flex items-center justify-center gap-2">
+          <h2 className="text-3xl font-bold mb-8 korean-text slide-up">
             🐾 How It Works 🐾
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-4">
-              <div className="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-accent">1</span>
+            <div className="space-y-4 fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="bg-korean-rose/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-korean-rose">1</span>
               </div>
-              <h3 className="text-xl font-bold">Choose Your Base</h3>
-              <p className="text-muted-foreground">Pick from our delicious ramen options</p>
+              <h3 className="text-xl font-bold korean-text">Choose Your Base 👩‍🍳</h3>
+              <p className="text-muted-foreground">Pick from our delicious Korean-inspired ramen options</p>
             </div>
-            <div className="space-y-4">
-              <div className="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-primary">2</span>
+            <div className="space-y-4 fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-korean-peach/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-korean-peach">2</span>
               </div>
-              <h3 className="text-xl font-bold">Add Toppings</h3>
-              <p className="text-muted-foreground">Customize with your favorite extras</p>
+              <h3 className="text-xl font-bold korean-text">Add Toppings 🧑‍🍳</h3>
+              <p className="text-muted-foreground">Customize with your favorite Korean extras</p>
             </div>
-            <div className="space-y-4">
-              <div className="bg-kawaii-green/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-kawaii-green">3</span>
+            <div className="space-y-4 fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="bg-korean-green/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-korean-green">3</span>
               </div>
-              <h3 className="text-xl font-bold">Cook & Enjoy</h3>
-              <p className="text-muted-foreground">Create your masterpiece and dig in!</p>
+              <h3 className="text-xl font-bold korean-text">Cook & Enjoy 👨‍👩‍👧‍👦</h3>
+              <p className="text-muted-foreground">Create your masterpiece and enjoy with friends!</p>
             </div>
           </div>
         </section>

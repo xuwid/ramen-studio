@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import pandaLogo from "@/assets/panda-logo.png";
+import pandaLogo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,11 +9,15 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={pandaLogo} alt="Ramen Studios" className="w-8 h-8" />
-              <span className="text-xl font-bold kawaii-text">Ramen Studios</span>
+              <img 
+                src={pandaLogo} 
+                alt="Ramen Studio Logo" 
+                className="w-10 h-10 rounded-full border-2 border-korean-pink/20 shadow-md" 
+              />
+              <span className="text-xl font-bold kawaii-text">Ramen Studio</span>
             </div>
             <p className="text-muted-foreground">
-              Make your own ramen experience! Cozy, fun, and delicious - just like home.
+              Make your own Korean ramen experience! Cozy, fun, and delicious - just like Korean home. 감사합니다! 🇰🇷
             </p>
           </div>
 
@@ -42,7 +46,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Made with <Heart className="w-4 h-4 text-accent" fill="currentColor" /> for ramen lovers
+            Made with <Heart className="w-4 h-4 text-accent" fill="currentColor" /> by Korean ramen lovers for ramen lovers 👨‍👩‍👧‍👦🇰🇷
           </p>
         </div>
       </div>

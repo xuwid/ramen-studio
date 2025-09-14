@@ -6,65 +6,72 @@
 
 @layer base {
   :root {
-    /* Base colors - warm and cozy */
-    --background: 351 43% 96%;
-    --foreground: 15 25% 15%;
+    /* Base colors - vibrant magenta/pink theme from menu board */
+    --background: 320 15% 96%;
+    --foreground: 320 20% 15%;
 
-    /* Card colors - soft and inviting */
-    --card: 0 0% 100%;
-    --card-foreground: 15 25% 15%;
+    /* Card colors - light pink-tinted whites */
+    --card: 320 30% 97%;
+    --card-foreground: 320 20% 15%;
 
     /* Popover colors */
-    --popover: 0 0% 100%;
-    --popover-foreground: 15 25% 15%;
+    --popover: 320 30% 97%;
+    --popover-foreground: 320 20% 15%;
 
-    /* Primary - vibrant ramen red */
-    --primary: 348 83% 47%;
+    /* Primary - vibrant magenta like menu board */
+    --primary: 320 85% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - warm wood tone */
-    --secondary: 35 32% 85%;
-    --secondary-foreground: 15 25% 15%;
+    /* Secondary - lighter magenta */
+    --secondary: 325 60% 85%;
+    --secondary-foreground: 320 30% 25%;
 
-    /* Muted - soft neutral */
-    --muted: 35 15% 92%;
-    --muted-foreground: 15 15% 50%;
+    /* Muted - soft magenta-gray */
+    --muted: 320 25% 90%;
+    --muted-foreground: 320 25% 45%;
 
-    /* Accent - bright neon pink */
-    --accent: 320 85% 65%;
+    /* Accent - bright magenta */
+    --accent: 315 90% 65%;
     --accent-foreground: 0 0% 100%;
 
-    /* Korean K-wave colors - bright and modern */
-    --korean-pink: 330 85% 70%;
-    --korean-blue: 210 100% 65%;
-    --korean-purple: 270 75% 70%;
-    --korean-green: 140 65% 60%;
-    --korean-orange: 25 95% 65%;
+    /* Korean K-wave colors - magenta/pink palette matching menu board */
+    --korean-pink: 320 85% 65%;
+    --korean-rose: 315 80% 55%;
+    --korean-peach: 330 75% 70%;
+    --korean-blue: 280 60% 70%;
+    --korean-purple: 310 70% 65%;
+    --korean-green: 280 40% 60%;
+    --korean-orange: 340 70% 65%;
     
-    /* Keep kawaii for compatibility */
-    --kawaii-blue: 210 100% 65%;
-    --kawaii-green: 140 65% 60%;
-    --kawaii-yellow: 48 100% 70%;
-    --kawaii-purple: 270 75% 70%;
-    --kawaii-orange: 25 95% 65%;
+    /* Keep kawaii for compatibility - magenta theme */
+    --kawaii-blue: 280 60% 70%;
+    --kawaii-green: 280 40% 60%;
+    --kawaii-yellow: 330 70% 75%;
+    --kawaii-purple: 310 70% 65%;
+    --kawaii-orange: 340 70% 65%;
 
-    /* Neon glow colors - Korean restaurant signs */
-    --neon-pink: 320 100% 70%;
-    --neon-blue: 220 100% 70%;
-    --neon-green: 140 100% 60%;
-    --neon-orange: 25 100% 70%;
-    --neon-red: 0 100% 65%;
+    /* Neon glow colors - vibrant magenta/pink aesthetic */
+    --neon-pink: 320 95% 70%;
+    --neon-rose: 315 90% 65%;
+    --neon-peach: 330 85% 75%;
+    --neon-blue: 280 70% 75%;
+    --neon-green: 280 50% 65%;
+    --neon-orange: 340 80% 70%;
+    --neon-red: 345 85% 60%;
 
-    /* Wood textures */
-    --wood-light: 35 45% 88%;
-    --wood-medium: 35 32% 75%;
-    --wood-dark: 35 25% 45%;
+    /* Wood textures - warmer tones */
+    --wood-light: 25 50% 90%;
+    --wood-medium: 25 40% 80%;
+    --wood-dark: 25 35% 50%;
 
-    /* Sticky note colors */
-    --sticky-pink: 320 85% 85%;
-    --sticky-blue: 195 85% 85%;
-    --sticky-green: 150 85% 85%;
-    --sticky-yellow: 48 85% 85%;
+    /* Sticky note colors - magenta/pink palette */
+    --sticky-pink: 320 75% 88%;
+    --sticky-rose: 315 70% 85%;
+    --sticky-peach: 330 70% 88%;
+    --sticky-blue: 280 60% 88%;
+    --sticky-green: 280 40% 88%;
+    --sticky-yellow: 330 65% 88%;
+    --sticky-lavender: 310 65% 88%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -141,40 +148,94 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
-  /* Kawaii animations */
-  @keyframes bounce-cute {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-5px) scale(1.02); }
+  /* Optimized Professional Animations */
+  /* Removed gentle-float animation for better performance */
+
+  @keyframes subtle-glow {
+    0%, 100% { 
+      box-shadow: 0 0 10px hsl(var(--korean-pink) / 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 20px hsl(var(--korean-pink) / 0.4);
+    }
   }
 
-  @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--neon-pink) / 0.4); }
-    50% { box-shadow: 0 0 30px hsl(var(--neon-pink) / 0.8); }
+  @keyframes slide-in-up {
+    from { 
+      opacity: 0; 
+      transform: translate3d(0, 20px, 0); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translate3d(0, 0, 0); 
+    }
   }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-10px) rotate(1deg); }
-    66% { transform: translateY(-5px) rotate(-1deg); }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
-  /* Custom utility classes */
+  @keyframes subtle-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+  }
+
+  /* Optimized Korean Cafe Utility Classes */
   .kawaii-shadow {
-    box-shadow: 0 8px 25px -8px hsl(var(--accent) / 0.3);
+    box-shadow: 0 6px 16px -6px hsl(var(--korean-pink) / 0.25);
   }
 
-  .neon-glow {
-    animation: glow 2s ease-in-out infinite;
+  /* Removed subtle-glow for better performance */
+
+  /* Removed gentle-float class for better performance */
+
+  .slide-up {
+    animation: slide-in-up 0.5s ease-out forwards;
+    will-change: transform, opacity;
+  }
+
+  .fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    will-change: opacity;
   }
 
   .sticky-note {
     transform: rotate(-2deg);
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: linear-gradient(135deg, 
+      hsl(var(--sticky-pink)) 0%,
+      hsl(var(--sticky-rose)) 100%);
   }
 
   .sticky-note:hover {
-    transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.08);
     z-index: 10;
+    box-shadow: 0 15px 35px hsl(var(--korean-pink) / 0.3);
+  }
+
+  .sticky-note.blue {
+    background: linear-gradient(135deg, 
+      hsl(var(--sticky-blue)) 0%,
+      hsl(var(--korean-blue)) 100%);
+  }
+
+  .sticky-note.green {
+    background: linear-gradient(135deg, 
+      hsl(var(--sticky-green)) 0%,
+      hsl(var(--korean-green)) 100%);
+  }
+
+  .sticky-note.yellow {
+    background: linear-gradient(135deg, 
+      hsl(var(--sticky-yellow)) 0%,
+      hsl(var(--korean-orange)) 100%);
+  }
+
+  .sticky-note.peach {
+    background: linear-gradient(135deg, 
+      hsl(var(--sticky-peach)) 0%,
+      hsl(var(--neon-peach)) 100%);
   }
 
   .wood-texture {
@@ -188,38 +249,299 @@
     );
   }
 
-  /* Typography */
+  .korean-card {
+    background: linear-gradient(135deg, 
+      hsl(var(--card)) 0%,
+      hsl(var(--korean-pink) / 0.08) 100%);
+    border: 2px solid hsl(var(--korean-pink) / 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+  }
+
+  .korean-card:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 12px 24px hsl(var(--korean-pink) / 0.25);
+  }
+
+  /* Professional Korean Typography - Vibrant Magenta Theme */
   .korean-text {
     font-weight: 700;
-    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--korean-blue)), hsl(var(--korean-purple)));
+    background: linear-gradient(135deg, 
+      hsl(var(--korean-pink)), 
+      hsl(var(--korean-rose)), 
+      hsl(var(--neon-pink)));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  /* Neon Style Text - Enhanced for Menu Board Theme */
+  .neon-text {
+    font-weight: 700;
+    color: hsl(var(--neon-pink));
+    text-shadow: 
+      0 0 8px hsl(var(--neon-pink) / 0.9),
+      0 0 16px hsl(var(--neon-pink) / 0.7),
+      0 0 24px hsl(var(--neon-pink) / 0.5),
+      0 0 32px hsl(var(--neon-pink) / 0.3);
+    animation: neon-flicker 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon-flicker {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px hsl(var(--korean-pink) / 0.8),
+        0 0 10px hsl(var(--korean-pink) / 0.6),
+        0 0 15px hsl(var(--korean-pink) / 0.4),
+        0 0 20px hsl(var(--korean-pink) / 0.2);
+    }
+    50% {
+      text-shadow: 
+        0 0 8px hsl(var(--korean-pink)),
+        0 0 15px hsl(var(--korean-pink) / 0.8),
+        0 0 25px hsl(var(--korean-pink) / 0.6),
+        0 0 35px hsl(var(--korean-pink) / 0.4);
+    }
   }
   
   /* Keep kawaii-text for compatibility */
   .kawaii-text {
     font-weight: 700;
-    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--korean-blue)), hsl(var(--korean-purple)));
+    background: linear-gradient(135deg, 
+      hsl(var(--korean-pink)), 
+      hsl(var(--korean-rose)), 
+      hsl(var(--korean-peach)));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
-  /* Korean sticky note wall effect */
+  /* Enhanced Korean sticky note wall effect - static for better performance */
   .sticky-wall {
     background: linear-gradient(45deg, 
-      hsl(var(--sticky-pink) / 0.1) 0%, 
-      hsl(var(--sticky-blue) / 0.1) 25%, 
-      hsl(var(--sticky-green) / 0.1) 50%, 
-      hsl(var(--sticky-yellow) / 0.1) 75%, 
-      hsl(var(--korean-pink) / 0.1) 100%);
-    background-size: 400% 400%;
-    animation: sticky-gradient 8s ease-in-out infinite;
+      hsl(var(--sticky-pink) / 0.15) 0%, 
+      hsl(var(--sticky-peach) / 0.12) 20%,
+      hsl(var(--sticky-blue) / 0.1) 40%, 
+      hsl(var(--sticky-green) / 0.1) 60%, 
+      hsl(var(--sticky-yellow) / 0.12) 80%, 
+      hsl(var(--korean-rose) / 0.15) 100%);
   }
-  
-  @keyframes sticky-gradient {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+  /* Korean restaurant vibes - Vibrant Magenta Theme */
+  .korean-atmosphere {
+    background: linear-gradient(135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--korean-pink) / 0.06) 30%,
+      hsl(var(--neon-pink) / 0.04) 70%,
+      hsl(var(--background)) 100%);
+  }
+
+  /* Korean Character Animations */
+  .korean-character {
+    animation: gentle-sway 4s ease-in-out infinite alternate;
+  }
+
+  .korean-character:nth-child(even) {
+    animation-delay: 2s;
+  }
+
+  @keyframes gentle-sway {
+    0%, 100% { 
+      transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+      transform: translateY(-2px) rotate(1deg); 
+    }
+  }
+
+  /* Sticky Wall Background - Enhanced for Menu Board Theme */
+  .sticky-wall {
+    background: linear-gradient(45deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--korean-pink) / 0.05) 25%,
+      hsl(var(--background)) 50%,
+      hsl(var(--korean-rose) / 0.04) 75%,
+      hsl(var(--background)) 100%);
+  }
+
+  /* Special Premium Sticky Notes */
+  .sticky-note.special {
+    position: relative;
+    background: linear-gradient(135deg, 
+      hsl(var(--sticky-pink)) 0%,
+      hsl(var(--korean-rose)) 50%,
+      hsl(var(--sticky-rose)) 100%);
+    border: 2px solid hsl(var(--korean-rose) / 0.4);
+    box-shadow: 
+      0 8px 20px hsl(var(--korean-rose) / 0.3),
+      0 0 20px hsl(var(--korean-pink) / 0.2);
+    animation: premium-glow 3s ease-in-out infinite alternate;
+  }
+
+  .sticky-note.special::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+      hsl(var(--neon-pink)), 
+      hsl(var(--neon-rose)), 
+      hsl(var(--neon-pink)));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+
+  .sticky-note.special:hover {
+    transform: rotate(0deg) scale(1.12);
+    box-shadow: 
+      0 12px 30px hsl(var(--korean-rose) / 0.4),
+      0 0 30px hsl(var(--korean-pink) / 0.3);
+    animation: premium-glow-fast 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes premium-glow {
+    0% { 
+      box-shadow: 
+        0 8px 20px hsl(var(--korean-rose) / 0.3),
+        0 0 20px hsl(var(--korean-pink) / 0.2);
+    }
+    100% { 
+      box-shadow: 
+        0 8px 25px hsl(var(--korean-rose) / 0.4),
+        0 0 25px hsl(var(--korean-pink) / 0.3);
+    }
+  }
+
+  @keyframes premium-glow-fast {
+    0% { 
+      box-shadow: 
+        0 12px 30px hsl(var(--korean-rose) / 0.4),
+        0 0 30px hsl(var(--korean-pink) / 0.3);
+    }
+    100% { 
+      box-shadow: 
+        0 12px 35px hsl(var(--korean-rose) / 0.5),
+        0 0 35px hsl(var(--korean-pink) / 0.4);
+    }
+  }
+
+  /* Hero Buttons - Distinctive Button Styling */
+  .hero-button {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    box-shadow: 
+      0 8px 20px hsl(var(--korean-pink) / 0.3),
+      0 4px 10px hsl(var(--korean-rose) / 0.2),
+      inset 0 1px 0 hsl(var(--background) / 0.1),
+      inset 0 -2px 4px hsl(var(--background) / 0.2);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    animation: button-pulse 2s ease-in-out infinite;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .hero-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      hsl(var(--background) / 0.1) 0%,
+      transparent 50%,
+      hsl(var(--background) / 0.1) 100%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .hero-button::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, 
+      hsl(var(--neon-pink)) 0%,
+      hsl(var(--neon-rose)) 50%,
+      hsl(var(--neon-pink)) 100%);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(3px);
+  }
+
+  .hero-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+      0 15px 35px hsl(var(--korean-pink) / 0.4),
+      0 8px 20px hsl(var(--korean-rose) / 0.3),
+      inset 0 1px 0 hsl(var(--background) / 0.2),
+      inset 0 -3px 6px hsl(var(--background) / 0.3);
+    animation: none;
+  }
+
+  .hero-button:hover::after {
+    opacity: 0.7;
+  }
+
+  .hero-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 
+      0 6px 20px hsl(var(--korean-pink) / 0.3),
+      0 3px 10px hsl(var(--korean-rose) / 0.2),
+      inset 0 2px 4px hsl(var(--background) / 0.4),
+      inset 0 -1px 2px hsl(var(--background) / 0.2);
+  }
+
+  /* Button Press Effect */
+  .hero-button:active::before {
+    background: linear-gradient(135deg, 
+      hsl(var(--background) / 0.2) 0%,
+      transparent 50%,
+      hsl(var(--background) / 0.2) 100%);
+  }
+
+  @keyframes button-pulse {
+    0%, 100% {
+      box-shadow: 
+        0 8px 20px hsl(var(--korean-pink) / 0.3),
+        0 4px 10px hsl(var(--korean-rose) / 0.2),
+        inset 0 1px 0 hsl(var(--background) / 0.1);
+    }
+    50% {
+      box-shadow: 
+        0 10px 25px hsl(var(--korean-pink) / 0.4),
+        0 5px 12px hsl(var(--korean-rose) / 0.3),
+        inset 0 1px 0 hsl(var(--background) / 0.15);
+    }
+  }
+
+  /* Enhanced Neon Glow for Hero Buttons */
+  .hero-button.neon-glow {
+    animation: neon-button-glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon-button-glow {
+    0% {
+      box-shadow: 
+        0 8px 20px hsl(var(--neon-pink) / 0.4),
+        0 4px 10px hsl(var(--neon-rose) / 0.3),
+        0 0 20px hsl(var(--neon-pink) / 0.2);
+    }
+    100% {
+      box-shadow: 
+        0 10px 25px hsl(var(--neon-pink) / 0.5),
+        0 5px 12px hsl(var(--neon-rose) / 0.4),
+        0 0 25px hsl(var(--neon-pink) / 0.3);
+    }
   }
 }
